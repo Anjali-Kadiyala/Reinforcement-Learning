@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<mujoco>
+    <worldbody>
+        <body name="agent" pos="1.0 1.0 0.0">
+            <joint type="free"/>
+            <geom type="sphere" size="0.1" rgba="1 0 0 1"/>
+        </body>
+        <body name="ball" pos="0.0 0.0 0.0">
+            <geom type="sphere" size="0.1" rgba="0 0 1 1"/>
+        </body>
+    </worldbody>
+</mujoco>
