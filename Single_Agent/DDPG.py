@@ -13,20 +13,24 @@ import random
 import copy
 
 
+
 from Actor import Actor
+from soccer_env import Soccer
+
+env = Soccer()
 
 BUFFER_SIZE = 100000
-BATCH_SIZE = 64
+BATCH_SIZE = 128 #64
 GAMMA = 0.99 #0.99 #0.78  
 TAU = 0.001
-LR_ACTOR = 0.0001
+LR_ACTOR = 0.0001#0.0001
 LR_CRITIC = 0.001
 WEIGHT_DECAY = 0.0001 
 al, cl = [], []
 
-epsilon = 1.0
-epsilon_decay = 0.995
-epsilon_min = 0.01
+epsilon = 0.9 #1.0
+epsilon_decay = 1000 #0.995
+epsilon_min = 0.05 #0.01
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 # Critic network
@@ -64,6 +68,46 @@ class ReplayBuffer:
         batch = random.sample(self.buffer, batch_size)
         state, action, reward, next_state, done = map(np.stack, zip(*batch))
         return state, action, reward.reshape(-1, 1), next_state, done.reshape(-1, 1)
+    
+#HER
+
+class HER:
+    def __init__(self):
+        self.her_episodes = 1000
+        self.her_max_steps = 100
+
+    def select_hindsight_goal(self, traj):
+        # returns the state with highest cumulative reward in the traj.
+        best_goal = max(traj, key = lambda x: sum(x['reward']))
+        return best_goal['state']
+    
+    def relebel_trajectory(self, traj, goal_state):
+        # create a reward for the new goal state and iterate through it to relable the trajectory with the selected hindsight goal.
+
+    def training_loop(self, her_episodes, her_max_steps):
+        for episode in range(her_episodes):
+            state = env.reset()
+            ep_reward = 0
+            traj = []
+
+            for t in range(her_max_steps):
+                action = DDPG.act(state)
+                next_state, reward, done, _ = env.step(action)
+
+                traj.appen((state, action, reward, next_state, done))
+
+                DDPG.train(state, action, reward, next_state, done)
+
+                state = next_state
+                ep_reward += reward
+
+                if done: 
+                    
+                    # relabling goal states
+                    goal_state = select_hindsight_goal(traj)
+
+
+
 
 
 class DDPG:

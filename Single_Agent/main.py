@@ -14,6 +14,7 @@ import copy
 
 from Actor import Actor
 from DDPG import DDPG
+from soccer_env import Soccer
 
 #from Sphero import Sphero
 #from Environment import Environment
