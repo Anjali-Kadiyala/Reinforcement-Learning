@@ -103,8 +103,15 @@ class HER:
 
                 if done: 
                     
-                    # relabling goal states
                     goal_state = select_hindsight_goal(traj)
+
+                    # relabling goal states
+                    relabel_trajectory(traj, goal_state)
+
+                    replay_buffer.extend(traj)
+
+                    break
+
 
 
 
