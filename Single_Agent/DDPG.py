@@ -69,48 +69,48 @@ class ReplayBuffer:
         state, action, reward, next_state, done = map(np.stack, zip(*batch))
         return state, action, reward.reshape(-1, 1), next_state, done.reshape(-1, 1)
     
-#HER
+#HER: It will solve the sparse reward problem which could potentially be the issue right now as the only positive reward is when the agent is touching the ball.  
 
-# class HER:
-#     def __init__(self):
-#         self.her_episodes = 1000
-#         self.her_max_steps = 100
+class HER:
+    def __init__(self):
+        self.her_episodes = 1000
+        self.her_max_steps = 100
 
-#     def select_hindsight_goal(self, traj):
-#         # returns the state with highest cumulative reward in the traj.
-#         best_goal = max(traj, key = lambda x: sum(x['reward']))
-#         return best_goal['state']
+    def select_hindsight_goal(self, traj):
+        # returns the state with highest cumulative reward in the traj.
+        best_goal = max(traj, key = lambda x: sum(x['reward']))
+        return best_goal['state']
     
-#     def relebel_trajectory(self, traj, goal_state):
-#         # create a reward for the new goal state and iterate through it to relable the trajectory with the selected hindsight goal.
+    def relebel_trajectory(self, traj, goal_state):
+        # create a reward for the new goal state and iterate through it to relable the trajectory with the selected hindsight goal.
 
-#     def training_loop(self, her_episodes, her_max_steps):
-#         for episode in range(her_episodes):
-#             state = env.reset()
-#             ep_reward = 0
-#             traj = []
+    def training_loop(self, her_episodes, her_max_steps):
+        for episode in range(her_episodes):
+            state = env.reset()
+            ep_reward = 0
+            traj = []
 
-#             for t in range(her_max_steps):
-#                 action = DDPG.act(state)
-#                 next_state, reward, done, _ = env.step(action)
+            for t in range(her_max_steps):
+                action = DDPG.act(state)
+                next_state, reward, done, _ = env.step(action)
 
-#                 traj.appen((state, action, reward, next_state, done))
+                traj.appen((state, action, reward, next_state, done))
 
-#                 DDPG.train(state, action, reward, next_state, done)
+                DDPG.train(state, action, reward, next_state, done)
 
-#                 state = next_state
-#                 ep_reward += reward
+                state = next_state
+                ep_reward += reward
 
-#                 if done: 
+                if done: 
                     
-#                     goal_state = select_hindsight_goal(traj)
+                    goal_state = select_hindsight_goal(traj)
 
-#                     # relabling goal states
-#                     relabel_trajectory(traj, goal_state)
+                    # relabling goal states
+                    relabel_trajectory(traj, goal_state)
 
-#                     replay_buffer.extend(traj)
+                    replay_buffer.extend(traj)
 
-#                     break
+                    break
 
 
 
