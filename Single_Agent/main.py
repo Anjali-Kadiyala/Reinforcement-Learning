@@ -60,7 +60,7 @@ def Is_boundaries_touched():
 	for i in range(len(data.contact.geom1)):
 		if (data.geom(data.contact.geom1[i]).name == "sphero1" and data.geom(data.contact.geom2[i]).name in boundaries) or (data.geom(data.contact.geom2[i]).name == "sphero1" and data.geom(data.contact.geom1[i]).name in boundaries):
 			print("touched_boundary")
-			return -1000
+			return 0#-1000
 	return 0
 
 def move_to_ball(current_coords_actor, current_coords_ball):
