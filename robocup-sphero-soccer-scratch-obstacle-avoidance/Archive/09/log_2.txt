@@ -1,0 +1,106 @@
+2023-10-15 09:58:32.654213: Observation space: Box([-3. -3.  0.  0. -3. -3.  0.  0.], [3.00e+00 3.00e+00 2.55e+02 3.59e+02 3.00e+00 3.00e+00 2.00e+04 3.59e+02], (8,), float32)
+2023-10-15 09:58:32.659190: Action space: Box(0.0, [359. 255.], (2,), float32)
+2023-10-15 09:58:32.667174: Initializing DDPG Agent with alpha 0.0003 beta 0.0003 input_dims [8] tau 0.005 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 64
+2023-10-15 09:58:35.434874: Player home_player_1 initialized. id_body 3 id_geom 28 id_joint 1
+2023-10-15 09:58:35.439854: Ball ball initialized. id_body 2 id_geom 27 id_joint 0
+2023-10-15 09:58:36.006687: START: Episode count: 1
+2023-10-15 09:58:36.013668: Initial player position: [1.5856579  2.71124641 0.365     ], ball position: [1.74246511 2.81897809 0.215     ]
+2023-10-15 09:58:36.473470: Final player position: [1.59901509 2.69696769 0.36498933], ball position: [1.74462118 2.82045938 0.21289829]
+2023-10-15 09:58:36.479420: END: Episode count 1, Episode length: 0.002, Score: 10001.479974621554
+2023-10-15 09:58:36.486403: START: Episode count: 2
+2023-10-15 09:58:36.495667: Initial player position: [-0.17432321 -2.00604296  0.365     ], ball position: [ 1.32529761 -1.03092992  0.215     ]
+2023-10-15 09:59:34.425528: Final player position: [-0.6518709  -1.88352454  0.36499994], ball position: [ 1.32529761 -1.03092992  0.21463282]
+2023-10-15 09:59:34.432506: END: Episode count 2, Episode length: 45.00200000000903, Score: -45.22479199891694
+2023-10-15 09:59:34.437525: START: Episode count: 3
+2023-10-15 09:59:34.446501: Initial player position: [ 0.02378256 -1.54311983  0.365     ], ball position: [2.57014477 2.59357335 0.215     ]
+2023-10-15 10:00:32.989292: Final player position: [ 0.57388989 -1.28062692  0.36510942], ball position: [2.57014477 2.59357335 0.21463282]
+2023-10-15 10:00:32.996303: END: Episode count 3, Episode length: 45.00200000000903, Score: 259.5428365560644
+2023-10-15 10:00:33.002255: START: Episode count: 4
+2023-10-15 10:00:33.009845: Initial player position: [2.87991545 1.64863482 0.365     ], ball position: [0.80389173 1.92197469 0.215     ]
+2023-10-15 10:01:32.764242: Final player position: [2.21681157 1.22611929 0.36512181], ball position: [0.80389173 1.92197469 0.21463282]
+2023-10-15 10:01:32.771224: END: Episode count 4, Episode length: 45.00200000000903, Score: 291.6608100478888
+2023-10-15 10:01:32.777238: START: Episode count: 5
+2023-10-15 10:01:32.785916: Initial player position: [ 1.73708995 -2.04759962  0.365     ], ball position: [0.13328732 1.66096604 0.215     ]
+2023-10-15 10:02:36.400837: Final player position: [ 1.51384059 -2.44389743  0.36497911], ball position: [0.13328732 1.66096604 0.21463282]
+2023-10-15 10:02:36.406821: END: Episode count 5, Episode length: 45.00200000000903, Score: -129.62683881819027
+2023-10-15 10:02:36.412805: START: Episode count: 6
+2023-10-15 10:02:36.422311: Initial player position: [-2.71659375 -0.43967675  0.365     ], ball position: [ 1.40365584 -2.60194693  0.215     ]
+2023-10-15 10:03:36.093988: Final player position: [-2.59179058  0.04017636  0.36503587], ball position: [ 1.40365584 -2.60194693  0.21463282]
+2023-10-15 10:03:36.100429: END: Episode count 6, Episode length: 45.00200000000903, Score: -55.607009413749495
+2023-10-15 10:03:36.106118: START: Episode count: 7
+2023-10-15 10:03:36.114128: Initial player position: [-1.16661883 -0.46501465  0.365     ], ball position: [-2.47179093  0.6173685   0.215     ]
+2023-10-15 10:04:30.266922: Final player position: [-1.85189456 -0.7222047   0.36496425], ball position: [-2.47179093  0.6173685   0.21463282]
+2023-10-15 10:04:30.273933: END: Episode count 7, Episode length: 45.00200000000903, Score: 138.97538957926656
+2023-10-15 10:04:30.279913: START: Episode count: 8
+2023-10-15 10:04:30.287864: Initial player position: [-0.85417077 -2.17009272  0.365     ], ball position: [ 1.01888106 -2.12743926  0.215     ]
+2023-10-15 10:05:28.274720: Final player position: [-0.6395908  -2.59380493  0.36509056], ball position: [ 1.01888106 -2.12743926  0.21463282]
+2023-10-15 10:05:28.281685: END: Episode count 8, Episode length: 45.00200000000903, Score: 109.50805834372173
+2023-10-15 10:05:28.287840: START: Episode count: 9
+2023-10-15 10:05:28.296429: Initial player position: [2.55038482 1.58868537 0.365     ], ball position: [ 1.22880144 -0.76507535  0.215     ]
+2023-10-15 10:06:26.656649: Final player position: [2.05443826 1.74482991 0.36496477], ball position: [ 1.22880144 -0.76507535  0.21463282]
+2023-10-15 10:06:26.663620: END: Episode count 9, Episode length: 45.00200000000903, Score: 50.66105795118904
+2023-10-15 10:06:26.669604: START: Episode count: 10
+2023-10-15 10:06:26.677583: Initial player position: [-0.59960319 -0.38483613  0.365     ], ball position: [-0.54859114  0.61430146  0.215     ]
+2023-10-15 10:07:25.316540: Final player position: [-0.00165688 -0.59457943  0.36598971], ball position: [-0.54859114  0.61430146  0.21463282]
+2023-10-15 10:07:25.324485: END: Episode count 10, Episode length: 45.00200000000903, Score: -102.82706946106245
+2023-10-15 10:07:25.330141: START: Episode count: 11
+2023-10-15 10:07:25.338785: Initial player position: [0.64657809 2.73711215 0.365     ], ball position: [ 2.35640983 -1.37944885  0.215     ]
+2023-10-15 10:08:24.198430: Final player position: [1.27241664 2.5107253  0.36496755], ball position: [ 2.35640983 -1.37944885  0.21463282]
+2023-10-15 10:08:24.205411: END: Episode count 11, Episode length: 45.00200000000903, Score: 220.3369931987422
+2023-10-15 10:08:24.210435: START: Episode count: 12
+2023-10-15 10:08:24.219374: Initial player position: [-0.51024733  1.89839401  0.365     ], ball position: [-0.96858352 -0.97920792  0.215     ]
+2023-10-15 10:09:22.326789: Final player position: [-0.43830393  1.86263837  0.36510898], ball position: [-0.96858352 -0.97920792  0.21463282]
+2023-10-15 10:09:22.333770: END: Episode count 12, Episode length: 45.00200000000903, Score: 32.27915049246261
+2023-10-15 10:09:22.340722: START: Episode count: 13
+2023-10-15 10:09:22.348732: Initial player position: [2.72286364 1.12130757 0.365     ], ball position: [-0.83265885 -2.64691145  0.215     ]
+2023-10-15 10:10:20.459060: Final player position: [2.98659871 1.50612283 0.36497696], ball position: [-0.83265885 -2.64691145  0.21463282]
+2023-10-15 10:10:20.467069: END: Episode count 13, Episode length: 45.00200000000903, Score: -222.02176212946577
+2023-10-15 10:10:20.473053: START: Episode count: 14
+2023-10-15 10:10:20.482029: Initial player position: [-2.29964667  0.57319039  0.365     ], ball position: [-1.9289103   1.94821034  0.215     ]
+2023-10-15 10:11:18.622578: Final player position: [-2.34207726  0.32308319  0.3650697 ], ball position: [-1.9289103   1.94821034  0.21463282]
+2023-10-15 10:11:18.630329: END: Episode count 14, Episode length: 45.00200000000903, Score: -86.22105508196466
+2023-10-15 10:11:18.637973: START: Episode count: 15
+2023-10-15 10:11:18.646242: Initial player position: [-2.26918297 -2.60662188  0.365     ], ball position: [1.78104026 2.22449606 0.215     ]
+2023-10-15 10:12:16.569776: Final player position: [-1.97161888 -3.42889784  0.36530041], ball position: [1.78104026 2.22449606 0.21463282]
+2023-10-15 10:12:16.577761: END: Episode count 15, Episode length: 45.00200000000903, Score: -231.02782936364244
+2023-10-15 10:12:16.583712: START: Episode count: 16
+2023-10-15 10:12:16.592169: Initial player position: [-2.99481482 -1.69101023  0.365     ], ball position: [-2.37585291 -0.84300079  0.215     ]
+2023-10-15 10:13:15.517472: Final player position: [-2.84990889 -1.59671724  0.36517185], ball position: [-2.37585291 -0.84300079  0.21463282]
+2023-10-15 10:13:15.524453: END: Episode count 16, Episode length: 45.00200000000903, Score: 145.16028616218614
+2023-10-15 10:13:15.531434: START: Episode count: 17
+2023-10-15 10:13:15.539440: Initial player position: [-2.04588291  0.54163414  0.365     ], ball position: [-0.17662658 -1.02863871  0.215     ]
+2023-10-15 10:14:15.277825: Final player position: [-2.02486259 -0.11227285  0.36497729], ball position: [-0.17662658 -1.02863871  0.21463282]
+2023-10-15 10:14:15.285773: END: Episode count 17, Episode length: 45.00200000000903, Score: 214.81917814487343
+2023-10-15 10:14:15.291793: START: Episode count: 18
+2023-10-15 10:14:15.299600: Initial player position: [-2.37820742  0.95259049  0.365     ], ball position: [1.48420672 0.23509938 0.215     ]
+2023-10-15 10:15:14.991879: Final player position: [-1.84002514  0.20670153  0.36509473], ball position: [1.48420672 0.23509938 0.21463282]
+2023-10-15 10:15:15.001515: END: Episode count 18, Episode length: 45.00200000000903, Score: 318.2174180671827
+2023-10-15 10:15:15.007418: START: Episode count: 19
+2023-10-15 10:15:15.018426: Initial player position: [-1.89319716  0.05054481  0.365     ], ball position: [1.8903165  0.60951607 0.215     ]
+2023-10-15 10:16:14.987970: Final player position: [-1.30141242  0.19111548  0.36509642], ball position: [1.8903165  0.60951607 0.21463282]
+2023-10-15 10:16:14.995982: END: Episode count 19, Episode length: 45.00200000000903, Score: 320.36153926966125
+2023-10-15 10:16:15.001961: START: Episode count: 20
+2023-10-15 10:16:15.010336: Initial player position: [-2.63976966 -0.22039992  0.365     ], ball position: [-0.65843881 -2.01984622  0.215     ]
+2023-10-15 10:17:14.672669: Final player position: [-2.52903736 -0.49158113  0.36499531], ball position: [-0.65843881 -2.01984622  0.21463282]
+2023-10-15 10:17:14.680678: END: Episode count 20, Episode length: 45.00200000000903, Score: 155.9663182073057
+2023-10-15 10:17:14.687628: Saving checkpoint to: AI/DDPG/saved_models/Actor_ddpg
+2023-10-15 10:17:14.697601: Saving checkpoint to: AI/DDPG/saved_models/TargetActor_ddpg
+2023-10-15 10:17:14.707575: Saving checkpoint to: AI/DDPG/saved_models/Critic_ddpg
+2023-10-15 10:17:14.717549: Saving checkpoint to: AI/DDPG/saved_models/TargetCritic_ddpg
+2023-10-15 10:17:14.729516: START: Episode count: 21
+2023-10-15 10:17:14.739516: Initial player position: [2.61672095 0.61207183 0.365     ], ball position: [0.19516548 2.49253855 0.215     ]
+2023-10-15 10:21:54.927346: Observation space: Box([-3. -3.  0.  0. -3. -3.  0.  0.], [3.00e+00 3.00e+00 2.55e+02 3.59e+02 3.00e+00 3.00e+00 2.00e+04 3.59e+02], (8,), float32)
+2023-10-15 10:21:54.933363: Action space: Box(0.0, [359. 255.], (2,), float32)
+2023-10-15 10:21:54.942305: Initializing DDPG Agent with alpha 0.0003 beta 0.0003 input_dims [8] tau 0.005 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 64
+2023-10-15 10:21:57.581765: Loading checkpoint from: AI/DDPG/saved_models/Actor_ddpg
+2023-10-15 10:21:57.599718: Loading checkpoint from: AI/DDPG/saved_models/TargetActor_ddpg
+2023-10-15 10:21:57.618666: Loading checkpoint from: AI/DDPG/saved_models/Critic_ddpg
+2023-10-15 10:21:57.639580: Loading checkpoint from: AI/DDPG/saved_models/TargetCritic_ddpg
+2023-10-15 10:21:57.658503: Player home_player_1 initialized. id_body 3 id_geom 28 id_joint 1
+2023-10-15 10:21:57.665511: Ball ball initialized. id_body 2 id_geom 27 id_joint 0
+2023-10-15 10:21:58.218718: START: Episode count: 1
+2023-10-15 10:21:58.228678: Initial player position: [-2.46229994  1.55395537  0.365     ], ball position: [ 2.18834653 -0.73750117  0.215     ]
+2023-10-15 10:22:53.523331: Final player position: [-3.1169066   1.0484129   0.36496093], ball position: [ 2.18834653 -0.73750117  0.21463282]
+2023-10-15 10:22:53.530343: END: Episode count 1, Episode length: 45.00200000000903, Score: -193.24976147339802
+2023-10-15 10:22:53.536294: START: Episode count: 2
+2023-10-15 10:22:53.545303: Initial player position: [-0.03318285 -0.28110226  0.365     ], ball position: [ 2.31674773 -2.14474245  0.215     ]

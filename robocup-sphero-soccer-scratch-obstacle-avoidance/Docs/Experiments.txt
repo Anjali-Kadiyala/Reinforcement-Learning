@@ -1,0 +1,105 @@
+Experiment 7: Training time ~18 hours
+Setup
+With random initial position for the player over the entire field and fixed ball position 
+With episode length of 5 minutes
+With +1000 reward for ball contact and +ve reward for moving towards the ball with high speed
+Result
+Agent is not moving towards the ball efficiently
+
+Experiment 8:
+Field size: 10x10, Randomize player: True, Randomize ball: True
+Simulation Time: 45 secs
+Done: When player touches ball
+Reward: reward_vel_to_ball
+Checkpoint 1: 
+The player kicked the ball but the episode did not terminate.
+Fixed the contact detection algorithm. Reduced Field size to 0.5x0.5. Episodes now terminate on contact with ball.
+
+Experiment 9: 
+Field size: 1x1, Randomize player: True, Randomize ball: True
+Simulation Time: 45 secs
+Done: When player touches ball
+Reward: +100 for touching the ball, -1 per timestep
+Checkpoint 1:
+Field size: 10x10
+Increase Reward to +10000 to show significance as accumulated score over 45 secs ~-22000.
+Checkpoint 2: 
+Field size: 3x3
+The player is not kicking the ball sufficiently in 10x10 environment. Reducing the field size.
+Checkpoint 3:
+Constant reward -1 is not incentivizing the ball enough to move. Bringing back reward_vel_to_ball.
+Checkpoint 4:
+Increase the Mujoco min bolt speed in Configurations from 0 to 10 for faster exploration.
+Fix velocity range in observation space from [0,255] to [0,20] as calculated observation space returns velocities in that range.
+Observation:
+The player is still moving like its actively avoiding the ball. The reward function needs to be verified.
+
+Experiment 10:
+Changelog: 
+reward_vel_to_ball now calculates on normalized player_velocity vector.
+reward_vel_to_ball is now assigned '-' sign as with '+' sign the player seems to actively avoid kicking the ball.
+reward_ball_kicked changed to +100.
+Observation:
+Agent is still not decisively hitting the ball
+
+Experiment 11: ~10 hours
+Changelog:
+Action space, observation space
+Observation:
+The agent keeps spinning in place. It did not learn to move towards the ball.
+
+Experiment 12: ~40 hours
+Changelog:
+Sphero Bolt heading is made absolute to its origin.
+Reward simplified to moving closer to ball only. Negative reward when agent touches boundaries.
+Observation:
+Agent touches and sticks to boundaries.
+
+Experiment 13: (Chase ball completed)
+Changelog:
+Dense reward: 0.05 * reward_vel_to_ball
+Rewards the agent for moving closer to the ball in proportion to its speed
+Training frequency increased for every 128 (batch_size) steps 
+self.env.player.ai.memory.mem_cntr % self.env.player.ai.batch_size == 0 and self.env.player.ai.memory.mem_cntr > 1000
+Observations:
+Agent successfully chases and sticks to the ball
+The agent climbs on top of the ball in the simulation. The model needs to be retrained in the next experiment due to this behaviour.
+
+Experiment 14:
+Changelog:
+Dense reward: (reward_goal + (0.05 * reward_vel_to_ball) + (0.1 * reward_vel_ball_to_goal))
+Rewards the agent for scoring the ball in opponent's goal and penalises agent when scored in own goal.
+When ball hits the goal and reflects back, the agent might learn that hitting a goal inadverently gives a negatives reward.
+So, keep done=True on goal score and terminate the episode.
+Observation:
+Mistakenly directed towards '-5' instead of '+5'. Retraining with correct parameters in next experiment.
+
+Experiment 15:
+Changelog:
+Directed towards goal (+5.7325, 0)
+Observation:
+The ball goes outside and to the boundaries frequently.
+Due to the non-existence of Throw-in logic, the agent tries to get the ball out of the corner. 
+This is unneccessary and unwanted behavior resulting in inaccurate training.
+Need to implement Throw-in logic for the next experiment.
+
+Experiment 16:
+Changelog:
+Implemented throw in logic. Archive 13 is the starting model for the training.
+Introduce small negative reward for kicking ball out of bounds.
+Observation:
+The learned behavior of sticking to the ball from Archive 13 might be preventing the model from achieving the task of hitting it towards the goal.
+Throw in reset behaviour in a small field might also be preventing it from fully learning the task of scoring a goal.
+
+Experiment 17:
+Changelog:
+Disable throw in reset behaviour but keep the negative reward.
+Train the model from scratch.
+Observation:
+Saved models in an incompatible state on termination.
+
+Experiment 18:
+Changelog:
+Introduced an obstacle avoidance environment. Ran it directly.
+Observation:
+Ran the experiment directly to reach the ball with obstacles in the way. 
