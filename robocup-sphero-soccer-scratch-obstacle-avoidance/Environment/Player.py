@@ -99,17 +99,22 @@ class Player:
 			'''
 
 			# goal: the ball touches the back net
-			''' Reward goal
+			# Reward goal
 			reward_goal = 0
+			done = False
+
 			contacts = data.contact
 			for c in contacts:
 				if (c.geom1 == ball.id_geom and c.geom2 == self.id_geom_goal_to_score_in_blue_team) or \
 					(c.geom1 == self.id_geom_goal_to_score_in_blue_team and c.geom2 == ball.id_geom):
 					reward_goal = 1
+					print("GOAL!!")
+					done = True
 				if (c.geom1 == ball.id_geom and c.geom2 == self.id_geom_goal_to_score_in_red_team) or \
 					(c.geom1 == self.id_geom_goal_to_score_in_red_team and c.geom2 == ball.id_geom):
 					reward_goal = -1
-			'''
+					done = True
+		
 
 			''' Throw in logic
 			reward_out_of_bounds = 0
@@ -145,7 +150,6 @@ class Player:
 
 			# Give -1 reward if the player touches the away team
 			reward_collision = 0
-			done = False
 
 			contacts = data.contact
 			for c in contacts:
@@ -154,8 +158,8 @@ class Player:
 					reward_collision = -1
 					done = True
 
-				if c.geom1 == self.id_geom and c.geom2 == ball.id_geom \
-					or c.geom1 == ball.id_geom and c.geom2 == self.id_geom:
-					done = True
+				# if c.geom1 == self.id_geom and c.geom2 == ball.id_geom \
+				# 	or c.geom1 == ball.id_geom and c.geom2 == self.id_geom:
+				# 	done = True
 
-			return (reward_collision + (0.05 * reward_vel_to_ball)), done
+			return (reward_collision + (0.05 * reward_vel_to_ball) + reward_goal), done
