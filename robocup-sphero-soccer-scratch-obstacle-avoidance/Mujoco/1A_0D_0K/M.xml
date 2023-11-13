@@ -55,5 +55,21 @@
 			<joint name="home_player_1" type="free" />
 		</body>
 
+		
+		<!-- Obstacles -->
+		<body name="away_player_1" pos="2.5 2.5 0.365">
+			<geom name="away_player_1" type="sphere" size="0.365" rgba="1 0 0 1" mass="200" density="100" />
+			<joint name="away_player_1" type="free" />
+		</body>
+		<body name="away_player_2" pos="2.5 2.5 0.365">
+			<geom name="away_player_2" type="sphere" size="0.365" rgba="1 0 0 1" mass="200" density="100" />
+			<joint name="away_player_2" type="free" />
+		</body>
+		<body name="away_player_3" pos="2.5 2.5 0.365">
+			<geom name="away_player_3" type="sphere" size="0.365" rgba="1 0 0 1" mass="200" density="100" />
+			<joint name="away_player_3" type="free" />
+		</body>
+
+
 	</worldbody>
 </mujoco>
