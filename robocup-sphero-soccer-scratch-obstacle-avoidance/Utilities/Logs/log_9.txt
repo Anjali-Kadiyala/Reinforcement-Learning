@@ -999,3 +999,103 @@
 2023-11-10 11:50:48.590392: END: Episode count 762, Episode length: 3.7439999999998093, Score: 36.16142197484803
 2023-11-10 11:50:48.590392: START: Episode count: 763
 2023-11-10 11:50:48.606013: Initial player position: [4.21368119 4.37607886 0.365     ], ball position: [ 3.07395733 -1.99079028  0.215     ]
+2023-11-10 16:25:57.435347: Observation space: Box([-12.         -8.25        0.          0.         -3.1415927 -12.
+  -8.25        0.          0.        -12.         -8.25      -12.
+  -8.25      -12.         -8.25      -11.475      -1.25      -11.475
+  -1.25     ], [1.2000000e+01 8.2500000e+00 5.0000000e+00 5.0000000e+00 3.1415927e+00
+ 1.2000000e+01 8.2500000e+00 1.8050542e+03 1.8050542e+03 1.2000000e+01
+ 8.2500000e+00 1.2000000e+01 8.2500000e+00 1.2000000e+01 8.2500000e+00
+ 1.1475000e+01 1.2500000e+00 1.1475000e+01 1.2500000e+00], (19,), float32)
+2023-11-10 16:25:57.482185: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:25:58.841754: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:25:58.919639: Player home_player_1 initialized. id_body 3 id_geom 20 id_joint 1
+2023-11-10 16:25:58.950882: Ball ball initialized. id_body 2 id_geom 19 id_joint 0
+2023-11-10 16:25:58.998252: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:25:59.044892: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:25:59.107156: Player away_player_1 initialized. id_body 4 id_geom 21 id_joint 2
+2023-11-10 16:25:59.138402: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:25:59.185265: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:25:59.248341: Player away_player_2 initialized. id_body 5 id_geom 22 id_joint 3
+2023-11-10 16:25:59.297008: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:25:59.341760: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:25:59.404023: Player away_player_3 initialized. id_body 6 id_geom 23 id_joint 4
+2023-11-10 16:27:15.732156: Observation space: Box([-12.         -8.25        0.          0.         -3.1415927 -12.
+  -8.25        0.          0.        -12.         -8.25      -12.
+  -8.25      -12.         -8.25      -11.475      -1.25      -11.475
+  -1.25     ], [1.2000000e+01 8.2500000e+00 5.0000000e+00 5.0000000e+00 3.1415927e+00
+ 1.2000000e+01 8.2500000e+00 1.8050542e+03 1.8050542e+03 1.2000000e+01
+ 8.2500000e+00 1.2000000e+01 8.2500000e+00 1.2000000e+01 8.2500000e+00
+ 1.1475000e+01 1.2500000e+00 1.1475000e+01 1.2500000e+00], (19,), float32)
+2023-11-10 16:27:15.779048: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:27:17.076038: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:27:17.154039: Player home_player_1 initialized. id_body 3 id_geom 20 id_joint 1
+2023-11-10 16:27:17.200902: Ball ball initialized. id_body 2 id_geom 19 id_joint 0
+2023-11-10 16:27:17.232145: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:27:17.279009: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:27:17.342000: Player away_player_1 initialized. id_body 4 id_geom 21 id_joint 2
+2023-11-10 16:27:17.373132: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:27:17.419996: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:27:17.482482: Player away_player_2 initialized. id_body 5 id_geom 22 id_joint 3
+2023-11-10 16:27:17.530815: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:27:17.575996: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:27:17.638485: Player away_player_3 initialized. id_body 6 id_geom 23 id_joint 4
+2023-11-10 16:28:10.139356: Observation space: Box([-12.         -8.25        0.          0.         -3.1415927 -12.
+  -8.25        0.          0.        -12.         -8.25      -12.
+  -8.25      -12.         -8.25      -11.475      -1.25      -11.475
+  -1.25     ], [1.2000000e+01 8.2500000e+00 5.0000000e+00 5.0000000e+00 3.1415927e+00
+ 1.2000000e+01 8.2500000e+00 1.8050542e+03 1.8050542e+03 1.2000000e+01
+ 8.2500000e+00 1.2000000e+01 8.2500000e+00 1.2000000e+01 8.2500000e+00
+ 1.1475000e+01 1.2500000e+00 1.1475000e+01 1.2500000e+00], (19,), float32)
+2023-11-10 16:28:10.185638: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:28:11.497681: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:28:11.577467: Player home_player_1 initialized. id_body 3 id_geom 20 id_joint 1
+2023-11-10 16:28:11.607149: Ball ball initialized. id_body 2 id_geom 19 id_joint 0
+2023-11-10 16:28:11.654017: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:28:11.700880: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:28:11.748251: Player away_player_1 initialized. id_body 4 id_geom 21 id_joint 2
+2023-11-10 16:28:11.794890: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:28:11.841646: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:28:11.904021: Player away_player_2 initialized. id_body 5 id_geom 22 id_joint 3
+2023-11-10 16:28:11.935263: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:28:11.982800: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:28:12.045663: Player away_player_3 initialized. id_body 6 id_geom 23 id_joint 4
+2023-11-10 16:28:53.419670: Observation space: Box([-12.         -8.25        0.          0.         -3.1415927 -12.
+  -8.25        0.          0.        -12.         -8.25      -12.
+  -8.25      -12.         -8.25      -11.475      -1.25      -11.475
+  -1.25     ], [1.2000000e+01 8.2500000e+00 5.0000000e+00 5.0000000e+00 3.1415927e+00
+ 1.2000000e+01 8.2500000e+00 1.8050542e+03 1.8050542e+03 1.2000000e+01
+ 8.2500000e+00 1.2000000e+01 8.2500000e+00 1.2000000e+01 8.2500000e+00
+ 1.1475000e+01 1.2500000e+00 1.1475000e+01 1.2500000e+00], (19,), float32)
+2023-11-10 16:28:53.466533: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:28:54.810605: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:28:54.872867: Player home_player_1 initialized. id_body 3 id_geom 20 id_joint 1
+2023-11-10 16:28:54.919731: Ball ball initialized. id_body 2 id_geom 19 id_joint 0
+2023-11-10 16:28:54.950974: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:28:55.001973: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:28:55.072412: Player away_player_1 initialized. id_body 4 id_geom 21 id_joint 2
+2023-11-10 16:28:55.107552: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:28:55.160070: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:28:55.218064: Player away_player_2 initialized. id_body 5 id_geom 22 id_joint 3
+2023-11-10 16:28:55.248820: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:28:55.294957: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:28:55.357187: Player away_player_3 initialized. id_body 6 id_geom 23 id_joint 4
+2023-11-10 16:30:04.732186: Observation space: Box([-12.         -8.25        0.          0.         -3.1415927 -12.
+  -8.25        0.          0.        -12.         -8.25      -12.
+  -8.25      -12.         -8.25      -11.475      -1.25      -11.475
+  -1.25     ], [1.2000000e+01 8.2500000e+00 5.0000000e+00 5.0000000e+00 3.1415927e+00
+ 1.2000000e+01 8.2500000e+00 1.8050542e+03 1.8050542e+03 1.2000000e+01
+ 8.2500000e+00 1.2000000e+01 8.2500000e+00 1.2000000e+01 8.2500000e+00
+ 1.1475000e+01 1.2500000e+00 1.1475000e+01 1.2500000e+00], (19,), float32)
+2023-11-10 16:30:04.779050: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:30:06.123139: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:30:06.186898: Player home_player_1 initialized. id_body 3 id_geom 20 id_joint 1
+2023-11-10 16:30:06.235004: Ball ball initialized. id_body 2 id_geom 19 id_joint 0
+2023-11-10 16:30:06.267497: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:30:06.333924: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:30:06.393763: Player away_player_1 initialized. id_body 4 id_geom 21 id_joint 2
+2023-11-10 16:30:06.434654: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:30:06.483637: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:30:06.529430: Player away_player_2 initialized. id_body 5 id_geom 22 id_joint 3
+2023-11-10 16:30:06.576069: Initializing DDPG Agent with alpha 0.0001 beta 0.001 input_dims [19] tau 0.001 gamma 0.99 n_actions 2 max_size 1000000 layer1_size 400 layer2_size 300 batch_size 128
+2023-11-10 16:30:06.626974: Loading checkpoint from: Checkpoints/DDPG/Actor_ddpg
+2023-11-10 16:30:06.689036: Player away_player_3 initialized. id_body 6 id_geom 23 id_joint 4

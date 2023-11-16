@@ -86,7 +86,7 @@ class Player:
 			player_to_ball_unit_vector = (ball_position - player_position) / np.linalg.norm(ball_position - player_position)
 			reward_vel_to_ball = np.dot(player_velocity, player_to_ball_unit_vector)
 
-			'''
+			
 			# vel-ball-to-goal: ball's linear velocity projected onto its unit direction vector towards the center of the opponent's goal
 			goal_position = None
 			if self.team == p.TEAM_HOME:
@@ -96,7 +96,7 @@ class Player:
 
 			ball_to_goal_unit_vector = (goal_position - ball_position) / np.linalg.norm(goal_position - ball_position)
 			reward_vel_ball_to_goal = np.dot(ball_velocity, ball_to_goal_unit_vector)
-			'''
+			
 
 			# goal: the ball touches the back net
 			# Reward goal
@@ -116,7 +116,7 @@ class Player:
 					done = True
 		
 
-			''' Throw in logic
+			# Throw in logic
 			reward_out_of_bounds = 0
 			contacts = data.contact
 			for c in contacts:
@@ -146,7 +146,7 @@ class Player:
 						or c.geom1 == self.out_of_bounds_geoms['line_goalW_S'] or c.geom2 == self.out_of_bounds_geoms['line_goalW_S']:
 						self.set_position(data, [out_of_bound_position[0] + displacement_player, out_of_bound_position[1], out_of_bound_position[2]])
 						ball.set_position(data, [out_of_bound_position[0] - displacement_ball, out_of_bound_position[1], out_of_bound_position[2]])
-				'''
+			
 
 			# Give -1 reward if the player touches the away team
 			reward_collision = 0
@@ -162,4 +162,4 @@ class Player:
 				# 	or c.geom1 == ball.id_geom and c.geom2 == self.id_geom:
 				# 	done = True
 
-			return (reward_collision + (0.05 * reward_vel_to_ball) + reward_goal), done
+			return (reward_collision + reward_out_of_bounds + (0.05 * reward_vel_to_ball) + reward_goal + (0.1 * reward_vel_ball_to_goal)), done

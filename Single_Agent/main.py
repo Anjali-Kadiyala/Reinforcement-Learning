@@ -227,7 +227,8 @@ def render_it():
 
 		while (data.time - time_prev < 1/60.0):
 			forward=state[4]
-			mj.mj_step(model, data)	
+			mj.mj_step(model, data)
+			
 			action = agent.act(state)[0]
 			angle, speed=action
 			forward, direction=move_and_rotate(data.xpos[9], angle, forward)
